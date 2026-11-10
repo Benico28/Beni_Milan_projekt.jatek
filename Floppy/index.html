@@ -26,8 +26,12 @@
         <section class="py-5">
             <div class="container">
                 <div class="gameArea">
+                    <div class="d-flex">
+                        <p class="stop mt-3" onclick="stopGame()"><img src="img/pause_icon.png" alt="" srcset="" data-bs-toggle="modal"  data-bs-target="#End "></p>
+                        <p class="w-100 fs-4 pe-5 pt-3 score text-end">Pont: <span class="pont">0</span></p>
+                    </div>
                     <section class="bird "></section>
-                    <button type="button" class="btn btn-warning btn-lg startBtn">Játék indítása</button>
+                    <button type="button" class="btn btn-warning btn-lg startBtn border-dark border-3">Játék indítása</button>
                 </div>
             </div>
         </section>
@@ -37,11 +41,11 @@
     </footer>
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade jatekSzabaly" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
+                <div class="modal-header bg-warning ">
+                    <h5 class="modal-title mx-auto ps-5" id="exampleModalLabel">
                         Flappy Bird – Játékszabályok
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
@@ -64,9 +68,41 @@
                     <p>Ha a madár nekiütközik egy csőnek vagy a földnek, véget ér a játék.</p>
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
                         Bezárás
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade jatekSzabaly" id="End" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning ">
+                    <h5 class="modal-title mx-auto ps-5" id="exampleModalLabel">
+                        A játék szünetel!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="bg-warning rounded-3 text-center"><strong>Pont: <span class="pont"></span></strong></p>
+                    <hr>
+                    
+                </div>
+                <div class="modal-footer mx-auto d-flex">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                        Folytatás
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Játék befejezése
                     </button>
                 </div>
 

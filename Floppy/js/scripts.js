@@ -41,3 +41,8 @@ function stop() {
     gameInterval = null;
     document.querySelectorAll(".pipe-pair").forEach(obj => obj.remove());
 }
+
+function stopGame(){
+    stop();
+    startBtn.style.display = "block";
+}
