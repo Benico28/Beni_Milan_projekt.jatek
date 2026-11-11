@@ -1,0 +1,107 @@
+body{
+    background-color: rgb(17 24 39 )
+}
+header{
+    background-color: rgb(31 41 55)
+}
+.birdimg {
+    width: 50px;
+    height: 50px;
+}
+
+.gameArea{
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    background-image: url(../img/Flappybg.png);
+}
+
+.bird{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    left: 100px;
+    top: 35%;
+    width: 130px;
+    height: 80px;
+    background-image: url(../img/Bird.png);
+}
+.pipe-pair {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pipe {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #543847;
+    background: linear-gradient(90deg, #8ee05a 0%, #c9f27a 18%, #73bf2e 45%, #5aa11f 100%);
+}
+
+.pipe-top {
+    top: 0;
+}
+
+.pipe-bottom {
+    bottom: 0;
+}
+.pipe::after {
+    content: "";
+    position: absolute;
+    left: -7px;
+    width: calc(100% + 14px);
+    height: 32px;
+    box-sizing: border-box;
+    border: 3px solid #543847;
+    background: linear-gradient(90deg, #8ee05a 0%, #c9f27a 18%, #73bf2e 45%, #5aa11f 100%);
+}
+
+.pipe-top::after {
+    bottom: -3px;
+}
+
+.pipe-bottom::after {
+    top: -3px;
+}
+
+.startBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.modal-content{
+    background-color: #ffffffce;
+}
+
+.stop img{
+    width: 25%;
+    position: relative;
+    left: 9%;
+    top: 2%;
+    z-index: 100;
+}
+
+.stop img:hover{
+    opacity: 0.7;
+}
+
+.score{
+    position: relative;
+    z-index: 100;
+    font-weight: 700;
+}

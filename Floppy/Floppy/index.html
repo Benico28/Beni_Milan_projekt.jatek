@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://flappybird.guru/favicon.ico">
+</head>
+
+<body class="text-white">
+    <header class="">
+        <div class="container ">
+            <div class="d-flex">
+                <p class=" mt-2"><img src="https://flappybird.guru/image/android-chrome-192x192.png" alt="Flappy Bird"
+                        class="birdimg mt-1"></p>
+                <h2 class="ms-4 pt-3 ">Flappy Bird</h2>
+                <p class="ms-auto pt-3 mt-1 p-2"><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Szabályok</button></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="gameArea">
+                    <div class="d-flex">
+                        <p class="w-100 fs-4 pe-5 pt-3 score text-end">Pont: <span class="pont">0</span></p>
+                    </div>
+                    <section class="bird "></section>
+                    <button type="button" class="btn btn-warning btn-lg startBtn border-dark border-3">Játék indítása</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <div class="modal fade jatekSzabaly" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning ">
+                    <h5 class="modal-title mx-auto ps-5" id="exampleModalLabel">
+                        Flappy Bird – Játékszabályok
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>A játék célja:</strong></p>
+                    <p>Vezesd a madarat a csövek között úgy, hogy ne ütközz neki semminek!</p>
+                    <hr>
+                    <p><strong>Irányítás:</strong></p>
+                    <ul>
+                        <li>Kattints a képernyőre, hogy a madár felemelkedjen.</li>
+                        <li>Ha nem kattintasz, a madár lefelé esik.</li>
+                    </ul>
+                    <p><strong>Pontozás:</strong></p>
+                    <ul>
+                        <li>Minden sikeresen elhagyott csőpár 1 pontot ér.</li>
+                        <li>Próbálj minél több pontot szerezni!</li>
+                    </ul>
+                    <p><strong> Vesztés:</strong></p>
+                    <p>Ha a madár nekiütközik egy csőnek vagy a földnek, véget ér a játék.</p>
+                </div>
+
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                        Bezárás
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade jatekSzabaly" id="End" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning ">
+                    <h5 class="modal-title mx-auto ps-5" id="exampleModalLabel">
+                        A játék szünetel!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="bg-warning rounded-3 text-center"><strong>Pont: <span class="pont"></span></strong></p>
+                    <hr>
+                    
+                </div>
+                <div class="modal-footer mx-auto d-flex">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                        Folytatás
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                        Játék befejezése
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Cso.js"></script>
+    <script src="js/Madar.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
