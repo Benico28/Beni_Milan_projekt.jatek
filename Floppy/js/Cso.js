@@ -90,10 +90,6 @@ class Cso {
 
     move() {
         this.#moveInterval = setInterval(() => {
-            if (this.#element.parentNode == null) {
-                this.remove();
-                return;
-            }
             this.#x -= this.#speed;
             this.#element.style.left = this.#x + "px";
 
