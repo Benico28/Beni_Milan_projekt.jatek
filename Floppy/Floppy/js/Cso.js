@@ -6,6 +6,7 @@ class Cso {
     #container;
     #element;
     #moveInterval = null;
+    #scored = false;
 
     static WIDTH = 80;
 
@@ -54,6 +55,32 @@ class Cso {
         this.#element.appendChild(top);
         this.#element.appendChild(bottom);
         this.#container.appendChild(this.#element);
+    }
+
+    getX() {
+        return this.#x;
+    }
+
+    getGapY() {
+        return this.#gapY;
+    }
+
+    getGapSize() {
+        return this.#gapSize;
+    }
+
+    isScored() {
+        return this.#scored;
+    }
+
+    setScored(scored) {
+        this.#scored = scored;
+    }
+
+    // Megállítja a cső mozgását, de a csövet nem törli (játék vége)
+    freeze() {
+        clearInterval(this.#moveInterval);
+        this.#moveInterval = null;
     }
 
     remove() {

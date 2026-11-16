@@ -67,6 +67,17 @@ class Madar {
         }, 20);
     }
 
+    
+    getHitbox() {
+        var left = this.#element.offsetLeft;
+        return {
+            left: left + 32,
+            right: left + 105,
+            top: this.#y + 14,
+            bottom: this.#y + 72
+        };
+    }
+
     stop() {
         clearInterval(this.#fallInterval);
         this.#fallInterval = null;
