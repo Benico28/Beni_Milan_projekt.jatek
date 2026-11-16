@@ -27,11 +27,11 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    position: relative;
+    position: absolute;
     left: 100px;
-    top: 30%;
-    width: 82px;
-    height: 50px;
+    top: 35%;
+    width: 130px;
+    height: 80px;
     background-image: url(../img/Bird.png);
 }
 .pipe-pair {
@@ -84,11 +84,6 @@ header{
     transform: translate(-50%, -50%);
     z-index: 10;
 }
-
-.jatekSzabaly{
-    background-color: #ffffff63;
-}
-
 .modal-content{
     background-color: #ffffffce;
 }
@@ -110,4 +105,3 @@ header{
     z-index: 100;
     font-weight: 700;
 }
-
